@@ -1,0 +1,22 @@
+﻿@model MyPortfolio.Models.TblAbouts
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<br />
+<h3>Hakkımda Güncelleme Sayfası</h3>
+@using (Html.BeginForm("UpdateAbout", "About", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <input type="hidden" name="AboutId" value="@Model.AboutId" />
+    <label>Resim Url</label>
+    <input type="file" name="ImagUrl" value="@Model.ImagUrl" />
+    <br />
+    <label>Başlık</label>
+    <input type="text" name="Title" class="form-control" value="@Model.Title" />
+    <br />
+    <label>Açıklama</label>
+    <input type="text" name="Description" class="form-control" value="@Model.Description" />
+    <br />
+    <button class="btn btn-outline-primary">Güncelle</button>
+}

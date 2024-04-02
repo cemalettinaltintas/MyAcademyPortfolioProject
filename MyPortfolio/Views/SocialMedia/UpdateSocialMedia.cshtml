@@ -1,0 +1,23 @@
+﻿@model MyPortfolio.Models.TblScialMedias
+@{
+    ViewBag.Title = "UpdateSocialMedia";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+<h3>Sosyal Medya Güncelleme Sayfası</h3>
+@using (Html.BeginForm("UpdateSocialMedia", "SocialMedia", FormMethod.Post))
+{
+    <input type="hidden" name="ScialMediaId" value="@Model.ScialMediaId" />
+    <label>Sosyal Medya Adı</label>
+    <input type="text" name="ScialMediaName" class="form-control" value="@Model.ScialMediaName" />
+    <br />
+    <label>Başlık</label>
+    <input type="text" name="Url" class="form-control" value="@Model.Url" />
+    <br />
+    <label>İkon</label>
+    <input type="text" name="Icon" class="form-control" value="@Model.Icon" />
+    <br />
+    <button class="btn btn-outline-primary">Güncelle</button>
+}

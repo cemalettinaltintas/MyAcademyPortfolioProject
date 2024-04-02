@@ -1,0 +1,30 @@
+﻿@model List<MyPortfolio.Models.TblAdmins>
+@{
+    ViewBag.Title = "LoginUserList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+<h3>Kullanı Sayfası</h3>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Kullanıcı Adı</th>
+        <th>Şifre</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.AdminId</td>
+            <td>@item.UserName</td>
+            <td>@item.Password</td>
+            <td><a href="/Login/DeleteLogin/@item.AdminId" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Login/UpdateLogin/@item.AdminId" class="btn btn-outline-info">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<br />
+<a href="/Login/AddLogin" class="btn btn-outline-dark">Yeni Kullanıcı Ekle</a>

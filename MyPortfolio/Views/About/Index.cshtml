@@ -20,13 +20,13 @@
             {
                 <tr>
                     <td>@item.AboutId</td>
-                    <td>@item.ImagUrl</td>
+                    <td><img src="@item.ImagUrl" class="img-thumbnail" style="width:100px; height:100px; object-fit:cover" /></td>
                     <td>@item.Title</td>
                     <td>@item.Description</td>
-                    <td><a class="btn btn-outline-danger">Sil</a></td>
-                    <td><a class="btn btn-outline-info">Update</a></td>
+                    <td><a href="/About/DeleteAbout/@item.AboutId" class="btn btn-outline-danger">Sil</a></td>
+                    <td><a href="/About/UpdateAbout/@item.AboutId" class="btn btn-outline-info">Güncelle</a></td>
                 </tr>
             }
 </table>
 <br/>
-<button class="btn btn-outline-dark">Yeni Hakkımda Ekle</button>
+<a href="/About/AddAbout" class="btn btn-outline-dark">Yeni Hakkımda Ekle</a>

@@ -1,0 +1,16 @@
+﻿@model MyPortfolio.Models.TblCategories
+@{
+    ViewBag.Title = "UpdateCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Kategori Güncelleme Sayfası</h3>
+<form method="post">
+    <input type="hidden" class="form-control" name="CategoryId" value="@Model.CategoryId" />
+    <label>Kategori Adı</label>
+    @*<input type="text" class="form-control" name="CategoryName" value="@Model.CategoryName" />*@
+    @Html.TextBoxFor(x=>x.CategoryName,new {@class="form-control"})
+    <br />
+    <button class="btn btn-outline-primary">Güncelle</button>
+</form>
+

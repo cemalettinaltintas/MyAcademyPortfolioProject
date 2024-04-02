@@ -19,5 +19,7 @@ namespace MyPortfolio.Models
         public string Email { get; set; }
         public string Subject { get; set; }
         public string MessageContent { get; set; }
+        public Nullable<System.DateTime> MessageDate { get; set; }
+        public Nullable<bool> IsRead { get; set; }
     }
 }

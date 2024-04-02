@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "AddSocialMedia";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+<h3>Yeni Sosyal Medya Ekleme Sayfası</h3>
+@using (Html.BeginForm("AddSocialMedia", "SocialMedia", FormMethod.Post))
+{
+    <label>Sosyal Medya Adı</label>
+    <input type="text" name="ScialMediaName" class="form-control" />
+    <br />
+    <label>Url</label>
+    <input type="text" name="Url" class="form-control" />
+    <br />
+    <label>Ikon</label>
+    <input type="text" name="Icon" class="form-control" />
+    <br />
+    <button class="btn btn-outline-primary">Kaydet</button>
+}

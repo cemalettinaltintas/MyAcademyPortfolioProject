@@ -1,0 +1,29 @@
+﻿@model MyPortfolio.Models.TblTestimonials
+@{
+    ViewBag.Title = "AddTestimonial";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+<h3>Yeni Referans Ekleme Sayfası</h3>
+@using (Html.BeginForm("AddTestimonial", "Testimonial", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <label>Resim Url</label>
+    <input type="file" name="ImageUrl" />
+    <br />
+
+    <label>Adı Soyadı</label>
+    <input type="text" name="NameSurname" class="form-control" />
+    <br />
+
+    <label>Başlık</label>
+    <input type="text" name="Title" class="form-control" />
+    <br />
+
+    <label>Açıklama</label>
+    <input type="text" name="Comments" class="form-control" />
+    <br />
+
+    <button class="btn btn-outline-primary">Kaydet</button>
+}
